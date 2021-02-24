@@ -13,8 +13,8 @@ async function runAuto({ browserWSEndpoint, data }) {
   await page.goto("https://app.fraudfilter.io/members/clientarea.php");
   await page.evaluate(() => {
     document.querySelector("input[id='inputEmail']").value =
-      "bertram.pecher@freenetdigital.com";
-    document.querySelector("#inputPassword").value = "Bockwurst,0815";
+      "example@something.com";
+    document.querySelector("#inputPassword").value = "password";
   });
   await page.$eval("#login", elem => elem.click());
   await page.goto("https://manage.fraudfilter.io/members/dashboard.php");
